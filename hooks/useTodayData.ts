@@ -224,13 +224,13 @@ export const useTodayData = ({ data, mockState = 'REAL', mockDate, mockTime }: U
         return 'HAS_SESSIONS';
     }, [data.weeks.length, semesterBounds, todaySessions.length, now, mockState]);
 
-    const getGreeting = () => {
+    const greeting = useMemo(() => {
         const hour = now.getHours();
         const name = data.metadata.teacher.split(' ').pop() || "";
         if (hour < 12) return t('stats.today.greeting.morning', { name });
         if (hour < 18) return t('stats.today.greeting.afternoon', { name });
         return t('stats.today.greeting.evening', { name });
-    };
+    }, [now, data.metadata.teacher, t]);
 
     const totalPeriods = todaySessions.reduce((acc, s) => acc + s.periodCount, 0);
 
@@ -249,6 +249,6 @@ export const useTodayData = ({ data, mockState = 'REAL', mockDate, mockTime }: U
         nextTeaching,
         totalPeriods,
         daysUntilSemester,
-        greeting: getGreeting()
+        greeting
     };
 };
