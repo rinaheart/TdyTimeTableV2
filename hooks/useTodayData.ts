@@ -100,21 +100,23 @@ export const useTodayData = ({ data, mockState = 'REAL', mockDate, mockTime }: U
     const now = useMemo(() => {
         const d = new Date(currentTime);
 
-        if (mockDate) {
-            const [y, m, day] = mockDate.split('-').map(Number);
-            d.setFullYear(y, m - 1, day);
-        }
+        if (mockState !== 'REAL') {
+            if (mockDate) {
+                const [y, m, day] = mockDate.split('-').map(Number);
+                d.setFullYear(y, m - 1, day);
+            }
 
-        if (mockTime) {
-            const [h, min] = mockTime.split(':').map(Number);
-            d.setHours(h, min, 0, 0);
-        } else if (mockDate) {
-            // If date is mocked but not time, set to midnight for consistency in date-only mocks
-            d.setHours(0, 0, 0, 0);
+            if (mockTime) {
+                const [h, min] = mockTime.split(':').map(Number);
+                d.setHours(h, min, 0, 0);
+            } else if (mockDate) {
+                // If date is mocked but not time, set to midnight for consistency in date-only mocks
+                d.setHours(0, 0, 0, 0);
+            }
         }
 
         return d;
-    }, [currentTime, mockDate, mockTime]);
+    }, [currentTime, mockDate, mockTime, mockState]);
 
     const currentJsDay = now.getDay();
     const dayOfWeekIdx = currentJsDay === 0 ? 6 : currentJsDay - 1;
