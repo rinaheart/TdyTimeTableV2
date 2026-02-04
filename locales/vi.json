@@ -298,6 +298,14 @@
         "changelog": "Nhật ký thay đổi (Changelog)",
         "history": [
             {
+                "version": "v0.8.1",
+                "date": "04/02/2026",
+                "changes": [
+                    "PWA Self-Healing: Cơ chế ép buộc làm mới Cache để xử lý triệt để lỗi lời chào bị kẹt trên thiết bị di động.",
+                    "Timezone Reactive: Tối ưu hóa việc nhận diện múi giờ hệ thống giúp lời chào nhảy đúng Sáng/Chiều/Tối tức thì."
+                ]
+            },
+            {
                 "version": "v0.8.0",
                 "date": "04/02/2026",
                 "changes": [

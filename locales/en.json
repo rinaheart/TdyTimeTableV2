@@ -298,6 +298,14 @@
         "changelog": "Changelog",
         "history": [
             {
+                "version": "v0.8.1",
+                "date": "04/02/2026",
+                "changes": [
+                    "PWA Self-Healing: Forced cache refresh mechanism to resolve the persistent greeting issue on mobile devices.",
+                    "Timezone Reactive: Optimized system timezone detection for instant Morning/Afternoon/Evening updates."
+                ]
+            },
+            {
                 "version": "v0.8.0",
                 "date": "04/02/2026",
                 "changes": [
