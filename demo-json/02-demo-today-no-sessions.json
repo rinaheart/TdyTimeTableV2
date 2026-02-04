@@ -1,0 +1,70 @@
+{
+    "metadata": {
+        "teacher": "DEMO B",
+        "semester": "2",
+        "academicYear": "2025-2026",
+        "extractedDate": "03/02/2026"
+    },
+    "weeks": [
+        {
+            "weekNumber": 4,
+            "dateRange": "02/02/2026 - 08/02/2026",
+            "days": {
+                "Monday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Tuesday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Wednesday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Thursday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Friday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Saturday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Sunday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                }
+            }
+        }
+    ],
+    "allCourses": [
+        {
+            "code": "MHLSG1292.001",
+            "name": "Quản lý Hộ sinh & CS sức khỏe SSCĐ",
+            "totalPeriods": 30,
+            "totalSessions": 8,
+            "groups": [
+                "Nhóm 1"
+            ],
+            "classes": [
+                "HS 12"
+            ],
+            "types": [
+                "LT"
+            ]
+        }
+    ],
+    "overrides": {},
+    "abbreviations": {}
+}

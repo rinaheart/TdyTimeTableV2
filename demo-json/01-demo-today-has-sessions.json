@@ -1,0 +1,156 @@
+{
+    "metadata": {
+        "teacher": "DEMO A",
+        "semester": "2",
+        "academicYear": "2025-2026",
+        "extractedDate": "03/02/2026"
+    },
+    "weeks": [
+        {
+            "weekNumber": 4,
+            "dateRange": "02/02/2026 - 08/02/2026",
+            "days": {
+                "Monday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Tuesday": {
+                    "morning": [
+                        {
+                            "courseCode": "MHCĐO1092.003",
+                            "courseName": "Nghiên cứu khoa học (SÁNG)",
+                            "group": "Nhóm 3",
+                            "className": "DS 13C",
+                            "timeSlot": "1-4",
+                            "periodCount": 4,
+                            "room": ".B.105",
+                            "teacher": "DEMO A",
+                            "type": "LT",
+                            "dayOfWeek": "Tuesday",
+                            "sessionTime": "morning"
+                        }
+                    ],
+                    "afternoon": [
+                        {
+                            "courseCode": "MHCĐO1092.002",
+                            "courseName": "Nghiên cứu khoa học (CHIỀU)",
+                            "group": "Nhóm 2",
+                            "className": "DS 13B",
+                            "timeSlot": "6-9",
+                            "periodCount": 4,
+                            "room": ".B.106",
+                            "teacher": "DEMO A",
+                            "type": "LT",
+                            "dayOfWeek": "Tuesday",
+                            "sessionTime": "afternoon"
+                        }
+                    ],
+                    "evening": [
+                        {
+                            "courseCode": "MHCĐO1092.001",
+                            "courseName": "Nghiên cứu khoa học (TỐI)",
+                            "group": "Nhóm 1",
+                            "className": "DS 13A",
+                            "timeSlot": "11-13",
+                            "periodCount": 3,
+                            "room": ".B.101",
+                            "teacher": "DEMO A",
+                            "type": "LT",
+                            "dayOfWeek": "Tuesday",
+                            "sessionTime": "evening"
+                        }
+                    ]
+                },
+                "Wednesday": {
+                    "morning": [
+                        {
+                            "courseCode": "NEXT-DAY",
+                            "courseName": "Lịch ngày mai",
+                            "group": "Nhóm 1",
+                            "className": "DEMO",
+                            "timeSlot": "1-5",
+                            "periodCount": 5,
+                            "room": "A.101",
+                            "teacher": "DEMO A",
+                            "type": "LT",
+                            "dayOfWeek": "Wednesday",
+                            "sessionTime": "morning"
+                        }
+                    ],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Thursday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Friday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Saturday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                },
+                "Sunday": {
+                    "morning": [],
+                    "afternoon": [],
+                    "evening": []
+                }
+            }
+        }
+    ],
+    "allCourses": [
+        {
+            "code": "MHCĐO1092.003",
+            "name": "Nghiên cứu khoa học (SÁNG)",
+            "totalPeriods": 45,
+            "totalSessions": 11,
+            "groups": [
+                "Nhóm 3"
+            ],
+            "classes": [
+                "DS 13C"
+            ],
+            "types": [
+                "LT"
+            ]
+        },
+        {
+            "code": "MHCĐO1092.002",
+            "name": "Nghiên cứu khoa học (CHIỀU)",
+            "totalPeriods": 45,
+            "totalSessions": 11,
+            "groups": [
+                "Nhóm 2"
+            ],
+            "classes": [
+                "DS 13B"
+            ],
+            "types": [
+                "LT"
+            ]
+        },
+        {
+            "code": "MHCĐO1092.001",
+            "name": "Nghiên cứu khoa học (TỐI)",
+            "totalPeriods": 30,
+            "totalSessions": 11,
+            "groups": [
+                "Nhóm 1"
+            ],
+            "classes": [
+                "DS 13A"
+            ],
+            "types": [
+                "LT"
+            ]
+        }
+    ],
+    "overrides": {},
+    "abbreviations": {}
+}
