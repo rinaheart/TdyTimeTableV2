@@ -298,6 +298,14 @@
         "changelog": "Nhật ký thay đổi (Changelog)",
         "history": [
             {
+                "version": "v0.8.2",
+                "date": "04/02/2026",
+                "changes": [
+                    "Header UI Evolution: Đưa nút chuyển Dark Mode lên Header với phong cách tối giản (Minimalist icon), giúp thao tác nhanh và là chỉ báo trực quan cho việc cập nhật bản mới.",
+                    "Hard Refresh Signal: Thay đổi cấu trúc Header để ép trình duyệt di động nhận diện sự thay đổi giao diện, giúp thoát khỏi tình trạng kẹt Cache cũ."
+                ]
+            },
+            {
                 "version": "v0.8.1",
                 "date": "04/02/2026",
                 "changes": [

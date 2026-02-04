@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { TabType, Metadata } from '../types';
-import { Menu } from 'lucide-react';
+import { Menu, Sun, Moon } from 'lucide-react';
 import UserMenu from './UserMenu';
 
 interface HeaderProps {
@@ -60,7 +60,20 @@ const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 md:gap-4">
+        {/* Minimalist Dark Mode Toggle */}
+        <button
+          onClick={onToggleDarkMode}
+          className="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 active:scale-95"
+          aria-label="Toggle Dark Mode"
+        >
+          {darkMode ? (
+            <Sun size={18} strokeWidth={2} className="text-amber-400" />
+          ) : (
+            <Moon size={18} strokeWidth={2} />
+          )}
+        </button>
+
         <UserMenu
           metadata={metadata}
           darkMode={darkMode}

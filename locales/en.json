@@ -298,6 +298,14 @@
         "changelog": "Changelog",
         "history": [
             {
+                "version": "v0.8.2",
+                "date": "04/02/2026",
+                "changes": [
+                    "Header UI Evolution: Integrated a minimalist Dark Mode toggle directly into the Header for faster access and as a clear visual update indicator.",
+                    "Hard Refresh Signal: Structural Header changes to force mobile browsers to recognize the update and bypass persistent PWA caching."
+                ]
+            },
+            {
                 "version": "v0.8.1",
                 "date": "04/02/2026",
                 "changes": [
