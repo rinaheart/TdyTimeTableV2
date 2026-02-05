@@ -298,6 +298,15 @@
         "changelog": "Nhật ký thay đổi (Changelog)",
         "history": [
             {
+                "version": "v0.9.0",
+                "date": "05/02/2026",
+                "changes": [
+                    "Lightning Fast Performance: Tối ưu hóa toàn diện giúp ứng dụng tải tức thì (Load Time ~176ms) và đạt điểm hiệu năng tuyệt đối.",
+                    "Smart Bundle Split: Tách thông minh các thư viện nặng (Biểu đồ) khỏi luồng chính, giúp trải nghiệm mượt mà ngay từ lần chạm đầu tiên.",
+                    "Dynamic Layout Loading: Cơ chế tải giao diện theo nhu cầu (Lazy Loading) giúp tiết kiệm dữ liệu và tăng tốc độ hiển thị."
+                ]
+            },
+            {
                 "version": "v0.8.2",
                 "date": "04/02/2026",
                 "changes": [

@@ -102,4 +102,4 @@ const TodayView: React.FC<TodayViewProps> = ({
     );
 };
 
-export default TodayView;
+export default React.memo(TodayView);

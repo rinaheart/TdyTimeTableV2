@@ -298,6 +298,15 @@
         "changelog": "Changelog",
         "history": [
             {
+                "version": "v0.9.0",
+                "date": "05/02/2026",
+                "changes": [
+                    "Lightning Fast Performance: Comprehensive optimization achieving instant load times (~176ms) and absolute performance scores.",
+                    "Smart Bundle Split: Intelligent separation of heavy libraries (Charts) from the main thread, ensuring a smooth experience from the first touch.",
+                    "Dynamic Layout Loading: On-demand interface loading mechanism (Lazy Loading) saves data and accelerates display speed."
+                ]
+            },
+            {
                 "version": "v0.8.2",
                 "date": "04/02/2026",
                 "changes": [

@@ -2,6 +2,7 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
@@ -48,6 +49,12 @@ export default defineConfig(({ mode }) => {
           enabled: true,
           type: 'module',
         }
+      }),
+      visualizer({
+        open: false,
+        filename: 'bundle-stats.html',
+        gzipSize: true,
+        brotliSize: true,
       })
     ],
     define: {
@@ -59,8 +66,8 @@ export default defineConfig(({ mode }) => {
         output: {
           manualChunks: {
             'vendor-react': ['react', 'react-dom', 'react-i18next', 'i18next'],
-            'vendor-recharts': ['recharts'],
             'vendor-utils': ['lucide-react', 'react-swipeable'],
+            'vendor-recharts': ['recharts'],
           }
         }
       },

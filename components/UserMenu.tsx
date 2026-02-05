@@ -152,4 +152,4 @@ const UserMenu: React.FC<UserMenuProps> = ({
     );
 };
 
-export default UserMenu;
+export default React.memo(UserMenu);
