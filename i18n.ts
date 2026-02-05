@@ -2,6 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { APP_VERSION } from './constants';
 
+import vi from './locales/vi.json';
+import en from './locales/en.json';
+
 // Default language detection
 let defaultLanguage = 'vi';
 try {
@@ -10,23 +13,14 @@ try {
     console.warn('LocalStorage not accessible, falling back to "vi"');
 }
 
-// Async locale loader
-const loadLocaleAsync = async (lng: string) => {
-    try {
-        const locale = await import(`./locales/${lng}.json`);
-        return locale.default;
-    } catch {
-        // Fallback to Vietnamese if locale not found
-        const fallback = await import('./locales/vi.json');
-        return fallback.default;
-    }
-};
-
-// Initialize with empty resources, load async
+// Initialize directly with resources
 i18n
     .use(initReactI18next)
     .init({
-        resources: {},
+        resources: {
+            vi: { translation: vi },
+            en: { translation: en }
+        },
         lng: defaultLanguage,
         fallbackLng: 'vi',
         interpolation: {
@@ -36,31 +30,13 @@ i18n
             }
         },
         react: {
-            useSuspense: false
+            useSuspense: false // We have resources loaded immediately
         }
     });
 
-// Load initial locale
-loadLocaleAsync(defaultLanguage).then((translations) => {
-    i18n.addResourceBundle(defaultLanguage, 'translation', translations, true, true);
-
-    // If not Vietnamese, also preload Vietnamese as fallback
-    if (defaultLanguage !== 'vi') {
-        loadLocaleAsync('vi').then((viTranslations) => {
-            i18n.addResourceBundle('vi', 'translation', viTranslations, true, true);
-        });
-    }
-});
-
-// Handle language change - load new locale dynamically
-i18n.on('languageChanged', async (lng) => {
+// Handle meta lang update
+i18n.on('languageChanged', (lng) => {
     document.documentElement.lang = lng;
-
-    // Check if bundle exists, if not load it
-    if (!i18n.hasResourceBundle(lng, 'translation')) {
-        const translations = await loadLocaleAsync(lng);
-        i18n.addResourceBundle(lng, 'translation', translations, true, true);
-    }
 });
 
 // Initial set
