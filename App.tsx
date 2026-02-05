@@ -27,7 +27,34 @@ import TodaySkeleton from './components/TodaySkeleton';
 import StatsSkeleton from './components/StatsSkeleton';
 
 const App: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [isReady, setIsReady] = useState(i18n.hasResourceBundle(i18n.resolvedLanguage || i18n.language, 'translation'));
+
+  useEffect(() => {
+    const onLoaded = () => {
+      if (i18n.hasResourceBundle(i18n.resolvedLanguage || i18n.language, 'translation')) {
+        setIsReady(true);
+      }
+    };
+    i18n.on('languageChanged', onLoaded);
+    i18n.on('added', onLoaded);
+
+    // Check immediately in case it loaded
+    if (i18n.hasResourceBundle(i18n.resolvedLanguage || i18n.language, 'translation')) {
+      setIsReady(true);
+    }
+
+    return () => {
+      i18n.off('languageChanged', onLoaded);
+      i18n.off('added', onLoaded);
+    };
+  }, [i18n]);
+
+  // Prevent rendering until translations are loaded
+  if (!isReady) {
+    return <div className="min-h-dvh flex items-center justify-center bg-white dark:bg-slate-950"></div>;
+  }
+
   const {
     data, metrics, currentWeekIndex, setCurrentWeekIndex,
     thresholds, setThresholds, overrides, setOverrides,
