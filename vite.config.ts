@@ -92,6 +92,9 @@ export default defineConfig({
             },
         },
         chunkSizeWarningLimit: 1000,
+        modulePreload: {
+            polyfill: true,
+        },
     },
     resolve: {
         tsconfigPaths: true,
